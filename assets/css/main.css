@@ -3286,7 +3286,7 @@
 			background-size: 100% 100%;
 			content: '';
 			display: block;
-			height: 6.5em;
+			height: 6.58em;
 			position: absolute;
 			width: 100%;
 		}
@@ -3301,7 +3301,7 @@
 			-webkit-transform: scaleY(-1);
 			-ms-transform: scaleY(-1);
 			transform: scaleY(-1);
-			bottom: -6.4em;
+			bottom: -6.6em;
 			left: 0;
 		}
 
