@@ -3286,7 +3286,7 @@
 			background-size: 100% 100%;
 			content: '';
 			display: block;
-			height: 6.58em;
+			height: 6.6em;
 			position: absolute;
 			width: 100%;
 		}
@@ -3318,6 +3318,8 @@
 			-ms-transform: scaleY(-1) scaleX(-1);
 			transform: scaleY(-1) scaleX(-1);
 		}
+
+
 
 		.wrapper .inner {
 			padding: 3em 0 1em 0 ;
@@ -3761,8 +3763,4 @@
 
 	h1, h2, h3, h4 {
 		font-family: 'dolce_vita';
-	}
-
-	#four:after {
-		bottom: -6.5em;
 	}
