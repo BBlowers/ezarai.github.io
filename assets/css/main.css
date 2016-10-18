@@ -3286,14 +3286,15 @@
 			background-size: 100% 100%;
 			content: '';
 			display: block;
-			height: 6.6em;
+			height: 6.7em;
+			/*height: 6.5em;*/
 			position: absolute;
 			width: 100%;
 		}
 
 		.wrapper:before {
 			left: 0;
-			top: -6.5em;
+			top: -6.65em;
 		}
 
 		.wrapper:after {
@@ -3301,7 +3302,7 @@
 			-webkit-transform: scaleY(-1);
 			-ms-transform: scaleY(-1);
 			transform: scaleY(-1);
-			bottom: -6.6em;
+			bottom: -6.65em;
 			left: 0;
 		}
 
