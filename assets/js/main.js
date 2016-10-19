@@ -17,12 +17,28 @@
 			$header = $('#header'),
 			$banner = $('#banner');
 
-			var screenHeight = $(window).height();
+			var screenHeight = $window.height();
+			var $sections = $('#one, #two, #three');
+			if($window.width() > 770) {
+					$window.scroll(function (event) {				    
+				    toggleShownSections($sections);
+					});	
+			} else {
+				$sections.css('display', '');
+				$sections.find('#skill-bars > li > div').each(function() {
+					var $div = $(this);
+					var percentage = $div.attr('data-percentage');
+					$div.find('span')
+						.fadeIn(2500)
+						.end()
+						.css({
+						'transition' : 'width 2s',
+						'width' : percentage + '%'
+					});
+				})
 
-			$window.scroll(function (event) {
-		    var $sections = $('#one, #two, #three');
-		    toggleShownSections($sections);
-			});
+
+			}			
 
 			function toggleShownSections($sections) {
 				var scroll = $window.scrollTop();
