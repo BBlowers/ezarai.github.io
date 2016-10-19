@@ -19,26 +19,10 @@
 
 			var screenHeight = $window.height();
 			var $sections = $('#one, #two, #three');
-			if($window.width() > 770) {
-					$window.scroll(function (event) {				    
-				    toggleShownSections($sections);
-					});	
-			} else {
-				$sections.css('display', '');
-				$sections.find('#skill-bars > li > div').each(function() {
-					var $div = $(this);
-					var percentage = $div.attr('data-percentage');
-					$div.find('span')
-						.fadeIn(2500)
-						.end()
-						.css({
-						'transition' : 'width 2s',
-						'width' : percentage + '%'
-					});
-				})
-
-
-			}			
+			
+			$window.scroll(function (event) {				    
+		    toggleShownSections($sections);
+			});			
 
 			function toggleShownSections($sections) {
 				var scroll = $window.scrollTop();
@@ -49,7 +33,7 @@
 					var sectionTop =  $section.offset().top;
 					var sectionMid = sectionHeight/2 + sectionTop;
 					var sectionBottom = sectionHeight + sectionTop;
-					if(sectionTop < screenMid && sectionTop > scroll || sectionBottom > screenMid && sectionBottom < scroll + screenHeight) {
+					if(sectionTop < screenMid && sectionTop > scroll || sectionBottom > screenMid && sectionBottom < scroll + screenHeight || sectionTop < scroll && sectionBottom > scroll + screenHeight) {
 						showSection($section);
 					} else {
 						hideSection($section);
